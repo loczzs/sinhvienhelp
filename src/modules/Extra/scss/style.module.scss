@@ -1,0 +1,64 @@
+.headline1 {
+  margin-bottom: 56px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 88px;
+  /* identical to box height, or 122% */
+
+  letter-spacing: -0.01em;
+
+  /* Neutral/2 */
+
+  color: #23262f;
+  
+}
+.container {
+    width: 70%;
+    margin: auto;
+    .bcss {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        /* identical to box height, or 133% */
+        margin-bottom: 20px;
+      
+        /* Neutral/3 */
+      
+        color: #353945;
+      }
+      .pcss {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+      
+        letter-spacing: -0.01em;
+      
+        /* Neutral/3 */
+      
+        color: #353945;
+      }
+  }
+
+
+.title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  /* Neutral/3 */
+
+  color: #353945;
+}

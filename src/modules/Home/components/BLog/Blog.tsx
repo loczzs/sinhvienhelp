@@ -5,8 +5,11 @@ import img3 from "../../../../img/ktz3.png";
 import img4 from "../../../../img/ktz4.png";
 import img5 from "../../../../img/ktz5.png";
 import scss from "../scss/style.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="new-knowlege" className={scss.newknowlege}>
       <div className={scss.container}>
@@ -15,12 +18,13 @@ const Blog = () => {
           Nơi mình sẽ cập nhật kiến thức các nội dung <br />
           về công ty
         </p>
+   
 
 
         <div className={scss.knowlege}>
-          <a href="baiviet1.html"></a>
-          <div className={`${scss.knowlegeitem} col-sm-6`}>
-            <a href="baiviet1.html">
+       
+          <div onClick={()=> navigate("know/post1")} className={`${scss.knowlegeitem} col-sm-6`}>
+            <a >
               <div className={scss.knowlegeimg}>
                 <img height="100%" src={img1} />
               </div>
@@ -40,9 +44,9 @@ const Blog = () => {
 
 
 
-          <a href="baiviet2.html"></a>
-          <div className={`${scss.knowlegeitem} col-sm-6`}>
-            <a href="baiviet2.html">
+         
+          <div  onClick={()=> navigate("know/post2")} className={`${scss.knowlegeitem} col-sm-6`}>
+            <a >
               <div className={scss.knowlegeimg}>
                 <img height="100%" src={img2} />
               </div>

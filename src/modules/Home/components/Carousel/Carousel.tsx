@@ -4,54 +4,59 @@ import { SearchOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import { getList, upCheck } from "../../slices/ListCtySlice";
+import { keySearch } from "../../slices/searchSlice";
 import { AppDispatch, RootState } from "../../../../store";
 import { useSelector, useDispatch } from "react-redux";
 import { Cty } from "../../../../interface/data";
 import Button from "react-bootstrap/Button";
-import { searchList } from "../../slices/searchSlice";
+import { searchList ,upCheck} from "../../slices/searchSlice";
 import img39 from "../../../../img/Frame 39.png";
-
+import { useNavigate } from "react-router-dom";
 const Carousel: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
- 
+  const navigate = useNavigate()
+
   const { listSearch, result } = useSelector(
     (state: RootState) => state.search
   );
-  // console.log(listSearch);
+  // console.log(keySearch);
 
+ 
+  var cart: string[] | string = [];
+  cart = JSON.parse(localStorage.getItem("Cartidsv") || "[]");
+  console.log(cart);
   
-  useEffect(() => {
-    dispatch(getList());
-  }, []);
-  var car2:string[]=[]
-  var carz = JSON.parse(localStorage.getItem("Cartidsv") as any) || [];
-  
-  
-  
+  const handleUp = async (cty: Cty) => {
+    console.log(cty);
 
-  const [cart, setCart] = React.useState<string[]>(carz);
-  localStorage.setItem("Cartidsv", JSON.stringify(cart));
-
-  const handleUp = (cty: Cty) => {
-    dispatch(upCheck(cty));
+    try {
+      await dispatch(upCheck(cty));
+      localStorage.setItem("Cartidsv", JSON.stringify([...cart, cty.id]));
+    } catch (error) {
+      alert(error);
+    }
   };
 
-  const handleCart = (id: string) => {
-    setCart([...cart, id]);
-  };
-  // console.log(length);
+  
+
+  
 
   const handlesearch = (e: any) => {
     if (e.key !== "Enter") return;
 
     var value: string = e.target.value;
+    localStorage.setItem("keySearch", JSON.stringify(value));
 
-    // console.log(typeof value);
+    dispatch(keySearch(value))
+
     dispatch(searchList(value));
+    
   };
   return (
-    <section id="sos" className={result === "" ? scss.carousel : scss.carousel2  }>
+    <section
+      id="sos"
+      className={result === "" ? scss.carousel : scss.carousel2}
+    >
       <div id="carousel-text" className={scss.carouseltext}>
         <p>Sinh Viên Help</p>
       </div>
@@ -72,10 +77,14 @@ const Carousel: React.FC = () => {
           </div>
         </div>
         <div className={scss.spsearch}>
-          {result ===""? <span></span> : <span id="spsearch">
-            Có <span style={{ fontWeight: 600 }}>{listSearch.length}</span> kết
-            quả trùng khớp với tìm kiếm của bạn
-          </span>}
+          {result === "" ? (
+            <span></span>
+          ) : (
+            <span id="spsearch">
+              Có <span style={{ fontWeight: 600 }}>{listSearch.length}</span>{" "}
+              kết quả trùng khớp với tìm kiếm của bạn
+            </span>
+          )}
         </div>
       </div>
       <div>
@@ -98,9 +107,12 @@ const Carousel: React.FC = () => {
               <p>
                 Nếu bạn nghi ngờ xem có thể xem
                 <a
+                onClick={()=>{
+                  navigate('/know')
+                }}
                   style={{ color: "black" }}
                   className="me-1 ms-1"
-                  href="kienthuc.html"
+                
                 >
                   Kiến thức
                 </a>
@@ -109,9 +121,10 @@ const Carousel: React.FC = () => {
               <p>
                 Nếu bạn chắc chắn là công ty đa cấp có thể
                 <a
+                  onClick={()=> navigate("rules")}
                   style={{ color: "black" }}
                   className="me-1 ms-1"
-                  href="yeucau.html"
+                
                 >
                   gửi yêu cầu
                 </a>
@@ -136,18 +149,18 @@ const Carousel: React.FC = () => {
                         let click: boolean = false;
                         for (var i = 0; i < cart.length; i++) {
                           if (cart[i] === cty.id) {
-                            colors = "blue";
+                            colors = "#0080f7";
                             click = true;
                           }
                         }
                         return (
                           <div key={cty.id} className={scss.flexcss2}>
                             <div className={scss.texblog}>
-                              <h6>{cty.name}</h6>
-                              <span>{cty.address}</span>
+                              <h6 style={{wordBreak:"break-word"}}> {cty.name}</h6>
+                              <span style={{wordBreak:"break-word"}}>{cty.address}</span>
                             </div>
                             <div className={scss.iconblog}>
-                              <div className="check">
+                              <div className="check  ">
                                 <OverlayTrigger
                                   //  onEntering={entering}
                                   overlay={
@@ -156,11 +169,11 @@ const Carousel: React.FC = () => {
                                     </Tooltip>
                                   }
                                 >
-                                  <span className="d-inline-block">
+                                  <span className="d-inline-block " >
                                     <Button
                                       disabled={click}
                                       onClick={() => {
-                                        handleCart(cty.id);
+                                        
                                         handleUp(cty);
                                       }}
                                       className={scss.dis}
@@ -172,7 +185,7 @@ const Carousel: React.FC = () => {
                                         style={{
                                           backgroundColor: "transparent",
                                           color: colors,
-                                          marginBottom: "3px",
+                                          marginBottom: "1px",
                                           transition: "all 500ms",
                                         }}
                                         viewBox="64 64 896 896"

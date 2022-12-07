@@ -221,9 +221,11 @@
             border-bottom: 1px solid #e6e8ec;
             padding-bottom: 24px;
             margin-bottom: 24px;
-            .texblog h6 {
+            .texblog {
+                width: 80%;
+              h6 {
               font-weight: 600;
-            }
+            }}
             .iconblog {
               display: flex;
               align-items: center;
@@ -239,7 +241,9 @@
     }
   }
 }
-
+.check{
+  display: flex;
+}
 .info-select {
   padding: 2px;
   border-radius: 6px;
@@ -444,4 +448,733 @@
 
 .dis:hover {
   background-color: transparent;
+}
+@media screen and (max-width: 1200px){
+  .texblog {
+    width: 80% !important;
+
+    h6 {
+    font-weight: 600 !important;
+  }}
+}
+@media screen and (max-width: 1024px){
+}
+@media screen and (max-width: 992px){
+  .carousel {
+    width: 100%;
+    background-image: url(../../../../img/Hero1.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* height: 690px; */
+    /* position: relative; */
+    margin-bottom: 80px;
+    .carouseltext  {
+      // padding:2px;
+      font-size: 55px;
+    }
+    .consearch {
+      width: 80%;
+      /* gap: 405px; */
+      // /* background:      #FCFCFD; */
+     
+      /* Neutral/7 */
+      
+  
+      /* height: 100%; */
+      .consearchzz {
+        /* margin-bottom: 20px; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-top: 0px;
+        /* background-color: red; */
+        padding: 12px 24px;
+        background: #fcfcfd;
+        /* Neutral/7 */
+  
+        border: 1px solid #f4f5f6;
+        border-radius: 6px;
+        .search {
+          width: 95%;
+          div {
+            input {
+              background-color: transparent;
+              border: none;
+              width: 94%;
+              outline: none;
+              /* height: 32px; */
+  
+              /* Tittle 4 */
+              /* color: red; */
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 32px;
+              /* identical to box height, or 200% */
+  
+              /* text-align: right; */
+  
+              /* Neutral/4 */
+  
+              color: #777e91;
+            }
+          }
+        }
+        .searchzz {
+          width: 5%;
+        }
+      }
+      .spsearch {
+        margin-top: 20px;
+      }
+    }
+    .searchfaill {
+      width: 80%;
+      // display: inline;
+      z-index: 1000;
+      margin: auto;
+      text-align: center;
+      // display: none;
+      .searchimg {
+        margin-top: 80px;
+      }
+      .searchfailltext {
+        padding: 12px 24px;
+        gap: 10px;
+  
+        /* Neutral/7 */
+  
+        background: #f4f5f6;
+        border-radius: 6px;
+  
+        z-index: 1000;
+        margin-top: 132px;
+        text-align: left;
+        // background-color: red;
+        p{
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+ 
+  .knowlegeimg{
+    display: block;
+  }
+  .carousel2{
+   
+    background-color: white;
+    background-image: none;
+    height: 100%;
+    padding-bottom: 100px;
+    .carouseltext{
+      margin-top: 70px;
+      padding-top: 0px;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .carousel {
+    width: 100%;
+    background-image: url(../../../../img/Hero1.png);
+    /* background-repeat: no-repeat; */
+    background-size: 600px 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    /* height: 690px; */
+    /* position: relative; */
+    margin-bottom: 80px;
+    .carouseltext  {
+      // padding:2px;
+      font-size: 55px;
+    }
+    .consearch {
+      width: 80%;
+      /* gap: 405px; */
+      // /* background:      #FCFCFD; */
+     
+      /* Neutral/7 */
+      
+  
+      /* height: 100%; */
+      .consearchzz {
+        /* margin-bottom: 20px; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-top: 0px;
+        /* background-color: red; */
+        padding: 12px 24px;
+        background: #fcfcfd;
+        /* Neutral/7 */
+  
+        border: 1px solid #f4f5f6;
+        border-radius: 6px;
+        .search {
+          width: 95%;
+          div {
+            input {
+              background-color: transparent;
+              border: none;
+              width: 94%;
+              outline: none;
+              /* height: 32px; */
+  
+              /* Tittle 4 */
+              /* color: red; */
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 32px;
+              /* identical to box height, or 200% */
+  
+              /* text-align: right; */
+  
+              /* Neutral/4 */
+  
+              color: #777e91;
+            }
+          }
+        }
+        .searchzz {
+          width: 5%;
+        }
+      }
+      .spsearch {
+        margin-top: 20px;
+      }
+    }
+    .searchfaill {
+      width: 80%;
+      // display: inline;
+      z-index: 1000;
+      margin: auto;
+      text-align: center;
+      // display: none;
+      .searchimg {
+        margin-top: 80px;
+      }
+      .searchfailltext {
+        padding: 12px 24px;
+        gap: 10px;
+  
+        /* Neutral/7 */
+  
+        background: #f4f5f6;
+        border-radius: 6px;
+  
+        z-index: 1000;
+        margin-top: 132px;
+        text-align: left;
+        // background-color: red;
+        p{
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+ 
+  .knowlegeimg{
+    display: block;
+  }
+  .carousel2{
+   
+    background-color: white;
+    background-image: none;
+    height: 100%;
+    padding-bottom: 100px;
+    .carouseltext{
+      margin-top: 70px;
+      padding-top: 0px;
+    }
+  }
+}
+@media screen and (max-width: 575px){
+  .carousel {
+    width: 100%;
+    background-image: url(../../../../img/Hero1.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    /* height: 690px; */
+    /* position: relative; */
+    margin-bottom: 80px;
+    .carouseltext  {
+      // padding:2px;
+      font-size: 55px;
+    }
+    .consearch {
+      width: 80%;
+      /* gap: 405px; */
+      // /* background:      #FCFCFD; */
+     
+      /* Neutral/7 */
+      
+  
+      /* height: 100%; */
+      .consearchzz {
+        /* margin-bottom: 20px; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-top: 0px;
+        /* background-color: red; */
+        padding: 12px 24px;
+        background: #fcfcfd;
+        /* Neutral/7 */
+  
+        border: 1px solid #f4f5f6;
+        border-radius: 6px;
+        .search {
+          width: 95%;
+          div {
+            input {
+              background-color: transparent;
+              border: none;
+              width: 94%;
+              outline: none;
+              /* height: 32px; */
+  
+              /* Tittle 4 */
+              /* color: red; */
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 32px;
+              /* identical to box height, or 200% */
+  
+              /* text-align: right; */
+  
+              /* Neutral/4 */
+  
+              color: #777e91;
+            }
+          }
+        }
+        .searchzz {
+          width: 5%;
+        }
+      }
+      .spsearch {
+        margin-top: 20px;
+      }
+    }
+    .searchfaill {
+      width: 80%;
+      // display: inline;
+      z-index: 1000;
+      margin: auto;
+      text-align: center;
+      // display: none;
+      .searchimg {
+        margin-top: 80px;
+      }
+      .searchfailltext {
+        padding: 12px 24px;
+        gap: 10px;
+  
+        /* Neutral/7 */
+  
+        background: #f4f5f6;
+        border-radius: 6px;
+  
+        z-index: 1000;
+        margin-top: 132px;
+        text-align: left;
+        // background-color: red;
+        p{
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+  .blog {
+    margin-bottom: 160px;
+    .containerblog {
+      /* padding: 0px 24px; */
+      /* width: 1120px; */
+      margin: auto;
+      /* padding: 0 160px; */
+      width: 80%;
+      /* position: fixed; */
+      margin: auto;
+  
+      padding: 24px 0px;
+      gap: 601px;
+      h1 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 64px;
+        /* identical to box height, or 133% */
+  
+        letter-spacing: -0.01em;
+  
+        /* Neutral/3 */
+  
+        color: #353945;
+      }
+      p {
+        /* width: 566px;
+          height: 64px; */
+        margin-bottom: 40px;
+        /* Tittle 1 */
+  
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        /* or 133% */
+  
+        letter-spacing: -0.01em;
+  
+        /* Neutral/3 */
+  
+        color: #353945;
+      }
+      .bloginfo {
+        border: 1px solid #141416;
+        border-radius: 6px;
+        .info {
+          padding: 10px;
+          .abc {
+            margin-bottom: 24px;
+            .flexcss {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              border-bottom: 1px solid #141416;
+              padding-bottom: 24px;
+              span {
+                width: 121px;
+                height: 32px;
+  
+                /* Tittle 1 */
+  
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 32px;
+                /* identical to box height, or 133% */
+  
+                letter-spacing: -0.01em;
+  
+                /* Neutral/2 */
+  
+                color: #23262f;
+              }
+            }
+            .flexcss2 {
+              width: 100%;
+              display: flex;
+              align-items: center !important;
+              justify-content: space-between;
+              border-bottom: 1px solid #e6e8ec;
+              padding-bottom: 24px;
+              margin-bottom: 24px;
+              .texblog {
+                width: 80%;
+
+                h6 {
+                font-weight: 600;
+              }}
+              .iconblog {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                span {
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .knowlegeimg{
+    display: none;
+  }
+  .carousel2{
+   
+    background-color: white;
+    background-image: none;
+    height: 100%;
+    padding-bottom: 100px;
+    .carouseltext{
+      margin-top: 70px;
+      padding-top: 0px;
+    }
+  }
+
+
+
+
+
+  
+  // .carousel{
+  //   background-size: 600px  ;
+  //   background-position: top center;
+  // }
+  // .carouseltext p {
+  //   // padding:2px;
+  //   font-size: 55px;
+  // }
+  // .consearch {
+  //   width: 90% !important;
+  //   /* gap: 405px; */
+  //   // /* background:      #FCFCFD; */
+   
+  //   /* Neutral/7 */
+    
+
+  //   /* height: 100%; */
+  
+  // }
+  
+}
+@media screen and (max-width: 376px){
+  .carousel {
+    width: 100%;
+    background-image: url(../../../../img/Hero1.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    /* height: 690px; */
+    /* position: relative; */
+    margin-bottom: 80px;
+    .carouseltext  {
+      // padding:2px;
+      font-size: 47px;
+    }
+    .consearch {
+      width: 80%;
+      /* gap: 405px; */
+      // /* background:      #FCFCFD; */
+     
+      /* Neutral/7 */
+      
+  
+      /* height: 100%; */
+      .consearchzz {
+        /* margin-bottom: 20px; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-top: 0px;
+        /* background-color: red; */
+        padding: 12px 24px;
+        background: #fcfcfd;
+        /* Neutral/7 */
+  
+        border: 1px solid #f4f5f6;
+        border-radius: 6px;
+        .search {
+          width: 95%;
+          div {
+            input {
+              background-color: transparent;
+              border: none;
+              width: 94%;
+              outline: none;
+              /* height: 32px; */
+  
+              /* Tittle 4 */
+              /* color: red; */
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 32px;
+              /* identical to box height, or 200% */
+  
+              /* text-align: right; */
+  
+              /* Neutral/4 */
+  
+              color: #777e91;
+            }
+          }
+        }
+        .searchzz {
+          width: 5%;
+        }
+      }
+      .spsearch {
+        margin-top: 20px;
+      }
+    }
+    .searchfaill {
+      width: 80%;
+      // display: inline;
+      z-index: 1000;
+      margin: auto;
+      text-align: center;
+      // display: none;
+      .searchimg {
+        margin-top: 80px;
+      }
+      .searchfailltext {
+        padding: 12px 24px;
+        gap: 10px;
+  
+        /* Neutral/7 */
+  
+        background: #f4f5f6;
+        border-radius: 6px;
+  
+        z-index: 1000;
+        margin-top: 132px;
+        text-align: left;
+        // background-color: red;
+        p{
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+  .carousel2{
+    @extend .carousel;
+    background-color: white;
+    background-image: none;
+    height: 100%;
+    padding-bottom: 100px;
+    .carouseltext{
+      margin-top: 70px;
+      padding-top: 0px;
+    }
+  }
+  .blog {
+    
+    margin-bottom: 160px;
+    .containerblog {
+      /* padding: 0px 24px; */
+      /* width: 1120px; */
+      margin: auto;
+      /* padding: 0 160px; */
+      width: 80%;
+      /* position: fixed; */
+      margin: auto;
+  
+      padding: 24px 0px;
+      gap: 601px;
+      h1 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 64px;
+        /* identical to box height, or 133% */
+  
+        letter-spacing: -0.01em;
+  
+        /* Neutral/3 */
+  
+        color: #353945;
+      }
+      p {
+        /* width: 566px;
+          height: 64px; */
+        margin-bottom: 40px;
+        /* Tittle 1 */
+  
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        /* or 133% */
+  
+        letter-spacing: -0.01em;
+  
+        /* Neutral/3 */
+  
+        color: #353945;
+      }
+      .bloginfo {
+        border: 1px solid #141416;
+        border-radius: 6px;
+        .info {
+          padding: 10px;
+          .abc {
+            margin-bottom: 24px;
+            .flexcss {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              border-bottom: 1px solid #141416;
+              padding-bottom: 24px;
+              span {
+                width: 121px;
+                height: 32px;
+  
+                /* Tittle 1 */
+  
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 32px;
+                /* identical to box height, or 133% */
+  
+                letter-spacing: -0.01em;
+  
+                /* Neutral/2 */
+  
+                color: #23262f;
+              }
+            }
+            .flexcss2 {
+              width: 100%;
+              display: flex;
+              align-items: center !important;
+              justify-content: space-between;
+              border-bottom: 1px solid #e6e8ec;
+              padding-bottom: 24px;
+              margin-bottom: 24px;
+              .texblog {
+                width: 80%;
+
+                h6 {
+                font-weight: 600;
+              }}
+              .iconblog {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                span {
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .knowlegeimg{
+    display: none;
+  }
+}
+@media screen and (max-width: 376px){
+  
 }

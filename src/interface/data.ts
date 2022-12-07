@@ -6,3 +6,13 @@ export interface Cty {
   name: string;
   type: string;
 }
+export interface Request{
+  id: null | string;
+    name: string;
+    address: string;
+    type: string;
+    info: string;
+    desc: string;
+    email: string;
+    bonus: string;
+}

@@ -10,7 +10,7 @@ import { Cty } from "../../../../interface/data";
 import Button from "react-bootstrap/Button";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import { type } from "os";
+
 
 const Listcty: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -28,27 +28,18 @@ const Listcty: React.FC = () => {
   //   e.children[0].style.borderTopColor = "green ";
   //   e.children[1].style.backgroundColor = "green";
   // };
-
- var carz = JSON.parse(localStorage.getItem("Cartidsv") as any ) || [];
-
-  const [cart, setCart] = React.useState<string[]>(carz);
-  localStorage.setItem("Cartidsv", JSON.stringify(cart));
-  
-  
-
-  const handleUp = (cty: Cty) => {
-    dispatch(upCheck(cty));
+  var cart: string[] | string = [];
+  cart = JSON.parse(localStorage.getItem("Cartidsv") || "[]");
+  const handleUp = async (cty: Cty) => {
     
+
+    try {
+      await dispatch(upCheck(cty));
+      localStorage.setItem("Cartidsv", JSON.stringify([...cart, cty.id]));
+    } catch (error) {
+      alert(error);
+    }
   };
-
-
-
-  const handleCart = (id: string) => {
-    setCart([...cart, id]);
-   
-    
-  };
-  // console.log(cart);
 
   return (
     <section id="blog" className={scss.blog}>
@@ -66,21 +57,23 @@ const Listcty: React.FC = () => {
               {listFilter
                 ?.map((cty) => {
                   let colors = "#777E91";
-                  let click:boolean = false;
+                  let click: boolean = false;
+
                   for (var i = 0; i < cart.length; i++) {
                     if (cart[i] === cty.id) {
-                      colors = "blue";
+                      colors = "#0080f7";
                       click = true;
                     }
                   }
+
                   return (
                     <div key={cty.id} className={scss.flexcss2}>
-                      <div className={scss.texblog}>
-                        <h6>{cty.name}</h6>
-                        <span>{cty.address}</span>
+                      <div style={{wordBreak:"break-word"}} className={scss.texblog}>
+                        <h6 style={{wordBreak:"break-word"}}>{cty.name}</h6>
+                        <span style={{wordBreak:"break-word"}}>{cty.address}</span>
                       </div>
                       <div className={scss.iconblog}>
-                        <div className="check">
+                        <div className={scss.check}>
                           <OverlayTrigger
                             //  onEntering={entering}
                             overlay={
@@ -91,23 +84,20 @@ const Listcty: React.FC = () => {
                           >
                             <span className="d-inline-block">
                               <Button
-                                disabled ={click}
+                                disabled={click}
                                 onClick={() => {
-                                  handleCart(cty.id);
                                   handleUp(cty);
                                 }}
                                 className={scss.dis}
                                 style={{
-                                  
                                   backgroundColor: "transparent",
-
                                 }}
                               >
                                 <svg
                                   style={{
-                                    backgroundColor:"transparent",
+                                    backgroundColor: "transparent",
                                     color: colors,
-                                    marginBottom: "3px",
+                                    marginBottom: "1px",
                                     transition: "all 500ms",
                                   }}
                                   viewBox="64 64 896 896"

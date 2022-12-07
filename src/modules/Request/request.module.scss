@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+}
+.title {
+  margin: 80px 0px;
+  text-align: center;
+  h1 {
+    /* Headline 1 */
+    margin: 0;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 88px;
+    /* identical to box height, or 122% */
+
+    letter-spacing: -0.01em;
+
+    /* Neutral/2 */
+
+    color: #23262f;
+  }
+}
+.formcon {
+  width: 45%;
+  margin: auto;
+  .formitem {
+    margin-bottom: 32px;
+    .incss {
+      padding: 12px 24px;
+      gap: 405px;
+
+      /* Neutral/8 */
+
+      background: #fcfcfd;
+      /* Neutral/6 */
+
+      border: 1px solid #e6e8ec;
+      border-radius: 6px;
+      input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+      }
+      input:focus {
+        outline: none;
+      }
+      .yeucauselect {
+        width: 100%;
+        border: none !important;
+        background-color: transparent;
+      }
+      .yeucauselect:focus {
+        outline: none !important;
+        background-color: transparent;
+      }
+      .yeucauselect:hover {
+        border: none;
+      }
+    }
+  }
+  .formitemz {
+    margin-bottom: 8px;
+    .incssz {
+      padding: 12px 24px;
+      gap: 405px;
+
+      width: 100%;
+      /* height: 169px; */
+      background: #fcfcfd;
+      /* Neutral/6 */
+
+      border: 1px solid #e6e8ec;
+      border-radius: 6px;
+      textarea {
+        border: none;
+        background-color: transparent;
+      }
+      textarea:focus {
+        outline: none;
+      }
+    }
+  }
+  .stylep {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Neutral/4 */
+
+    color: #777e91;
+    margin-bottom: 32px;
+  }
+  .rules {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    padding: 12px 24px;
+    gap: 10px;
+
+    width: 100%;
+    /* height: 104px; */
+
+    /* Neutral/7 */
+
+    background: #f4f5f6;
+    border-radius: 6px;
+    margin-bottom: 32px;
+    p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 143% */
+
+      letter-spacing: -0.01em;
+
+      /* Neutral/3 */
+      margin-bottom: 0px;
+      color: #353945;
+    }
+  }
+  button {
+    padding: 12px 24px;
+    gap: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Neutral/8 */
+
+    color: #fcfcfd;
+
+    /* Neutral/2 */
+    margin-bottom: 80px;
+    background: #23262f;
+    border-radius: 3px;
+  }
+}
+.spancss {
+  margin-bottom: 8px !important;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* Neutral/3 */
+
+  color: #353945;
+}
+.modalzzz {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+
+  .modalcon {
+    z-index: 10000;
+    position: absolute;
+
+    // width: 300px;
+    // transition: all 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 0% !important;
+    padding: 20px 20px 40px;
+    background: white;
+    /* Modal/Light */
+    // height: 300px;
+    position: fixed;
+    width: 25%;
+    box-shadow: 0px 40px 64px -24px rgba(0, 0, 0, 0.12);
+    border-radius: 24px;
+    animation-name: margiz;
+    animation-duration: 600ms;
+    animation-iteration-count: unset;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+    .circle {
+      text-align: center;
+      width: 128px;
+      height: 128px;
+      line-height: 128px;
+      /* Color/02 */
+
+      background-color: #d6f0e8;
+      /* opacity: 0.2; */
+      border-radius: 64px;
+      position: relative;
+
+      svg {
+        width: 50%;
+        height: 50%;
+      }
+    }
+    .modaltext {
+      /* margin-bottom: 24px; */
+      text-align: center;
+      width: 80%;
+      margin: auto;
+      h3 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        /* identical to box height, or 133% */
+        /* color: red; */
+        text-align: center;
+        letter-spacing: -0.01em;
+
+        /* Neutral/08 */
+
+        color: #22252d;
+      }
+      p {
+        /* text-align: center; */
+
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+
+        text-align: center;
+
+        /* Neutral/06 */
+
+        color: #494e5b;
+        /* color: red; */
+      }
+      .modalbutton {
+        display: flex;
+        justify-content: center;
+        .but1 {
+          margin-right: 10px;
+          padding: 12px 24px;
+          gap: 10px;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+          background-color: transparent;
+
+          /* Neutral/2 */
+
+          color: #23262f;
+          border-radius: 3px;
+        }
+        .but2 {
+          @extend .but1;
+          color: white;
+          margin-right: 0px;
+          background: #23262f;
+        }
+      }
+    }
+  }
+  .modalcon2 {
+    @extend .modalcon;
+    margin-top: 0% !important;
+  }
+}
+@keyframes margiz {
+  from {
+    opacity: 0;
+    margin-top: -5%;
+    
+  }
+  to {
+    
+    margin-top: 0%;
+    opacity: 1  ;
+  }
+}
+.loading {
+  animation: load 2s infinite linear;
+  margin-left: 2px;
+  margin-bottom: 1.5px;
+}
+.loading1 {
+  animation: none;
+  margin-left: 2px;
+  margin-bottom: 1.5px;
+}
+@keyframes load {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 992px){
+  .title{
+    h1{
+      font-size: 47px;
+    }
+  }
+  .formcon{
+    width: 90%;
+  }
+}
+
