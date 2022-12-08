@@ -40,7 +40,7 @@ const Footer: React.FC  = () => {
                   navigate("wonder");
                 }}
               >
-                thắc mắc
+                Thắc mắc
               </a>
               <a
                 onClick={() => {
@@ -56,7 +56,7 @@ const Footer: React.FC  = () => {
             </div>
             <div className={`${scss.f2} col-sm-4`}>
               <h6 className="refsp">liên lạc</h6>
-              <a href="yeucau.html">góp ý</a>
+              <a href="yeucau.html">Góp ý</a>
               <a>Email</a>
             </div>
           </div>
